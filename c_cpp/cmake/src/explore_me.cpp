@@ -9,8 +9,8 @@ void exploreMe(int a, int b, string c) {
     if (b >= 2000000) {
       if (b - a < 100000) {
         // Trigger the undefined behavior sanitizer
-        int n = 23;
-        n <<= 32;
+//        int n = 23;
+//        n <<= 32;
 
         if (c == "FUZZING") {
           // Trigger a heap buffer overflow
