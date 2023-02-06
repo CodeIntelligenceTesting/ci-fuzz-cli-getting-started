@@ -1,0 +1,10 @@
+explore_me.a
+explore_me.o
+libexplore.so
+
+my_fuzz_test
+
+.cifuzz-findings
+.cifuzz-corpus
+*_inputs
+crash-*
