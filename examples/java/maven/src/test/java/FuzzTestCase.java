@@ -1,7 +1,6 @@
-package com.example;
-
 import com.code_intelligence.jazzer.api.FuzzedDataProvider;
 import com.code_intelligence.jazzer.junit.FuzzTest;
+import com.example.ExploreMe;
 
 public class FuzzTestCase {
     @FuzzTest
