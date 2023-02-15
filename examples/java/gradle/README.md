@@ -8,7 +8,7 @@ main [README](../../README.md).
 
 You can start fuzzing with
 ```bash
-cifuzz run com.example.FuzzTestCase
+cifuzz run FuzzTestCase
 ```
 
 ## Coverage
@@ -18,5 +18,5 @@ and XML (e.g. for IDE support) as output formats.
 
 Run the coverage command after your cifuzz run:
 ```bash
-cifuzz coverage com.example.FuzzTestCase
+cifuzz coverage FuzzTestCase
 ```

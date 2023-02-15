@@ -1,0 +1,40 @@
+{
+  "name": "mystifying_lamb",
+  "type": "CRASH",
+  "input_data": "QGphei5aZXL/Cv8KHBxwHHA=",
+  "logs": [
+    "== Java Exception: com.code_intelligence.jazzer.api.FuzzerSecurityIssueHigh: Remote Code Execution",
+    "Unrestricted class loading based on externally controlled data may allow",
+    "remote code execution depending on available classes on the classpath.",
+    "\tat jaz.Zer.\u003cclinit\u003e(Zer.java:54)",
+    "\tat java.base/java.lang.Class.forName0(Native Method)",
+    "\tat java.base/java.lang.Class.forName(Class.java:375)",
+    "\tat ExploreMe.exploreMe(ExploreMe.kt:11)",
+    "\tat com.example.FuzzTestCase.myFuzzTest(FuzzTestCase.kt:14)",
+    "== libFuzzer crashing input ==",
+    "MS: 0 ; base unit: 0000000000000000000000000000000000000000",
+    "0x40,0x6a,0x61,0x7a,0x2e,0x5a,0x65,0x72,0xff,0xa,0xff,0xa,0x1c,0x1c,0x70,0x1c,0x70,",
+    "@jaz.Zer\\377\\012\\377\\012\\034\\034p\\034p",
+    "artifact_prefix='./'; Test unit written to .cifuzz-findings/mystifying_lamb/crashing-input",
+    "Base64: QGphei5aZXL/Cv8KHBxwHHA="
+  ],
+  "details": "Security Issue: Remote Code Execution",
+  "more_details": {
+    "name": "Remote Code Execution",
+    "severity": {
+      "description": "HIGH",
+      "score": 7
+    }
+  },
+  "created_at": "2023-02-10T09:05:51.141207-05:00",
+  "input_file": ".cifuzz-findings/mystifying_lamb/crashing-input",
+  "stack_trace": [
+    {
+      "SourceFile": "ExploreMe",
+      "Line": 11,
+      "Column": 0,
+      "FrameNumber": 0,
+      "Function": "exploreMe"
+    }
+  ]
+}
