@@ -3,20 +3,9 @@ This is a simple Maven based project, already configured with
 **cifuzz**. It should quickly produce a finding, but slow enough to
 see the progress of the fuzzer.
 
-To start make sure you installed **cifuzz** according to the 
-main [README](../../README.md).
+To start make sure you installed **cifuzz** according to the main [CI Fuzz CLI README](https://github.com/CodeIntelligenceTesting/cifuzz#installation).
 
 You can start fuzzing with
 ```bash
 cifuzz run com.example.FuzzTestCase
-```
-
-## Coverage
-cifuzz can generate Java coverage reports using
-[jacoco](https://www.jacoco.org). This example is configured to use both HTML
-and XML (e.g. for IDE support) as output formats.
-
-Run the coverage command after your cifuzz run:
-```bash
-cifuzz coverage com.example.FuzzTestCase
 ```
