@@ -8,8 +8,14 @@ class ExploreMe(private val a: Int) {
                     if (c.startsWith("@")) {
                         val className = c.substring(1)
                         try {
-                            Class.forName(className)
-                        } catch (ignored: ClassNotFoundException) {
+                            Class.forName(className).newInstance()
+                        } catch (ex: Exception) {
+                            when(ex) {
+                                is ClassNotFoundException, is InstantiationException, is IllegalAccessException -> {
+                                    // ignore 
+                                }
+                                else -> throw ex
+                            }
                         }
                     }
                 }

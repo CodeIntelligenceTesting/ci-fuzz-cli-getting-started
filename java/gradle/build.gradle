@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id "com.code-intelligence.cifuzz" version "1.2.0"
 }
 
 repositories {
@@ -16,22 +17,7 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    // Use JUnit Jupiter for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
-    // Use Jazzer for fuzzing.
-    testImplementation 'com.code-intelligence:jazzer-junit:0.13.3'
-
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:31.1-jre'
-}
-
 application {
     // Define the main class for the application.
-    mainClass = 'com.github.CodeIntelligenceTesting.cifuzz.App'
-}
-
-test {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
+    mainClass = 'com.example.App'
 }
